@@ -14,7 +14,7 @@ app.get("/result", (req, res)=>{
     request(url, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body)
-            //console.log(data);
+          
             if(data.Response==='False'){
                 res.send("Movie Not Found");
             }else{
@@ -30,11 +30,11 @@ app.get("/result/:id", (req, res)=>{
     request(url, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body)
-            //console.log(data);
+           
             if(data.Response==='False'){
                 res.send("Movie Not Found");
             }else{
-                //res.send(data);
+               
                 res.render("Info", {movie: data});    
             }
         }else{
