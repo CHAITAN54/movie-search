@@ -45,3 +45,7 @@ app.get("/result/:id", (req, res)=>{
 app.get("*", (req, res)=>{
     res.send("Some Error");
 })
+
+app.listen('80',()=>{
+    console.log("server started")
+})
