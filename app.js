@@ -26,7 +26,7 @@ app.get("/result", (req, res)=>{
     });
 });
 app.get("/result/:id", (req, res)=>{
-    const url = "http://www.omdbapi.com/?apikey=cfd672ef&i=" + req.params.id;
+    const url = "http://www.omdbapi.com/?i=tt3896198&apikey=a3da473" + req.params.id;
     request(url, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             const data = JSON.parse(body)
