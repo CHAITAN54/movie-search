@@ -8,11 +8,11 @@ app.set("view engine", "ejs")
 app.use('/public', express.static('public'))
 
 app.get("/", (req, res)=>{
-    res.render("homepage")
+    res.render("home")
 })
-app.get("/aboutme", (req, res)=>{
-    res.render("Aboutme")
-})
+// app.get("/aboutme", (req, res)=>{z
+//     res.render("Aboutme")
+// })
 app.get("/result", (req, res)=>{
     console.log(req.query.movieName)
     const url= `http://www.omdbapi.com/?apikey=cfd672ef&s=${req.query.movieName}`
